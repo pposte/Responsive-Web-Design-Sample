@@ -65,12 +65,7 @@ h2 {
     margin-right: 0;
 }
 
-// Starting at 320 as suggested, then
-// moving to Bootstrap's break points
-// 320, 768, 992, 1200
-// Not sure how important it is to maintain the
-// 800px fixed width of the container, but I'm going
-// to work with it
+
    img {
        max-width: 100%;
        height: auto;
