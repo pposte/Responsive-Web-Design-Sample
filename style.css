@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+}
+
+.page-wrap {
+    width: 800px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.main-story {
+    position: relative;
+    margin: 0 0 25px 0;
+}
+
+img {
+    display: block;
+}
+
+a {
+    color: lightblue;
+}
+
+.story-intro {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    padding: 20px;
+    color: white;
+}
+
+h1 {
+    font-size: 4em;
+}
+
+h1,
+h2 {
+    margin: 0 0 10px 0;
+}
+
+.story-intro h1 {
+    font-size: 2.5em;
+}
+
+.story-intro p {
+    margin: 0;
+}
+
+.sub-stories {
+    overflow: hidden;
+    margin: 0 0 25px 0;
+}
+
+.sub-story {
+    float: left;
+    width: 250px;
+    margin-right: 25px;
+    position: relative;
+    font-size: 80%;
+}
+
+.last {
+    margin-right: 0;
+}
+
+// Starting at 320 as suggested, then
+// moving to Bootstrap's break points
+// 320, 768, 992, 1200
+// Not sure how important it is to maintain the
+// 800px fixed width of the container, but I'm going
+// to work with it
+   img {
+       max-width: 100%;
+       height: auto;
+   }
+
+@media only screen (max-width: 320px) {
+    .page-wrap {
+        width: 320px;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+    .page-wrap {
+        max-width: 320px;
+        overflow: hidden;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 639px) {
+    .page-wrap {
+        max-width: 480px;
+        overflow: hidden;
+    }
+}
+
+@media only screen and (min-width: 640px) and (max-width: 767px) {
+    .page-wrap {
+        width: 640px;
+        overflow: hidden;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+
+    h1 {
+        font-size: 2.5em;
+    }
+    .main-story .story-intro h1 {
+        font-size: 2em;
+    }
+    .sub-story {
+        margin: 0 0 25px 0;
+        width: auto;
+        float: none;
+        overflow: hidden;
+    }
+    .sub-story img {
+        width: 20%;
+        height: auto;
+        float: left;
+        min-height: 1px;
+    }
+    .sub-story .story-intro {
+        margin: 0 0 0 20%;
+        height: 100%;
+        width: 80%;
+        overflow: hidden;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 839px) {
+    .page-wrap {
+        width: 768px;
+        overflow: hidden;
+    }
+    .sub-story {
+        width: 239px;
+    }
+}
+
+
+.page-wrap > h1 {
+    position: fixed;
+    height: 100px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 100;
+}
+
+.page-wrap > p {
+    margin-top: 100px;
+}
