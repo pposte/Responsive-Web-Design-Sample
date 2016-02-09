@@ -3,7 +3,7 @@
  */
 $(document).ready(function() {
 
-// Make the “Back to top” link scroll to the top of the “Back to Most Important Story” module and not to the top of the page.
+// Make the “Back to top” link scroll to the top.
     $("#back-to-top").click(function(e) {
         $('html, body').animate({
             scrollTop: $(".main-story").offset().top
@@ -13,11 +13,8 @@ $(document).ready(function() {
 
     //Add a function so when a “Less Important Story” module is clicked it disappears and shows another new version of the module, only 3 “Less Important Story” modules should appear to the user at once.
 
-    // Note that the margins are messed up
-    var newStories = [ "A new story to replace the old one",
-        "Another story to replace another one",
-        "It's another story and we are running out of news!",
-        "Ello Guvna! What a fine day 'tis!"];
+
+    var newStories = ["New Story which is less important will be shown here after disappearing the clicked story. "];
 
     $(".sub-stories").on("click", ".sub-story", function() {
         var $clone = $(this).clone();
